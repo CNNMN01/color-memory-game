@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Memory Game - Test Your Memory Skills!</title>
+    <meta name="description" content="Challenge your memory with this addictive Simon Says-style color sequence game. How far can you go?">
+    <meta name="keywords" content="memory game, simon says, brain training, color game, sequence game">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Color Memory Game - Test Your Memory Skills!">
+    <meta property="og:description" content="Challenge your memory with this addictive color sequence game. How far can you go?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- Google AdSense - Replace with your actual codes -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Banner Ad -->
+    <div class="ad-container top-ad">
+        <div class="ad-placeholder">Advertisement</div>
+        <!-- Replace with actual ad code:
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="banner"></ins>
+        -->
+    </div>
+
+    <div class="game-container">
+        <header>
+            <h1>Color Memory</h1>
+            <p class="subtitle">Test your memory with this Simon Says-style game</p>
+            <div class="score-display">
+                Score: <span id="score">0</span> | Best: <span id="best-score">0</span>
+            </div>
+            <div id="message">Click Start to Begin!</div>
+        </header>
+        
+        <div class="game-board">
+            <div class="color-button red" data-color="red" data-sound="261.63"></div>
+            <div class="color-button blue" data-color="blue" data-sound="329.63"></div>
+            <div class="color-button green" data-color="green" data-sound="392.00"></div>
+            <div class="color-button yellow" data-color="yellow" data-sound="523.25"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-btn">🎮 Start Game</button>
+            <button id="sound-toggle">🔊</button>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Game Over!</h2>
+            <div class="final-score">
+                Score: <span id="final-score">0</span>
+                <div id="new-record" class="new-record hidden">🎉 New Record!</div>
+            </div>
+            
+            <!-- Interstitial Ad -->
+            <div class="ad-container modal-ad">
+                <div class="ad-placeholder">Advertisement</div>
+                <!-- Replace with actual ad code:
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="rectangle"></ins>
+                -->
+            </div>
+            
+            <div class="modal-buttons">
+                <button id="play-again-btn">🔄 Play Again</button>
+                <button id="share-btn">📤 Share Score</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Success Message -->
+    <div id="share-message" class="share-message hidden">Score copied to clipboard!</div>
+
+    <!-- Bottom Banner Ad -->
+    <div class="ad-container bottom-ad">
+        <div class="ad-placeholder">Advertisement</div>
+        <!-- Replace with actual ad code:
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="banner"></ins>
+        -->
+    </div>
+
+    <!-- Hidden SEO Content -->
+    <div class="seo-content">
+        <h2>Simon Says Color Memory Game</h2>
+        <p>Brain training memory game with colored buttons. Improve your memory and concentration skills with this addictive sequence game.</p>
+        <p>Features: Sound effects, high scores, social sharing, mobile responsive design, keyboard controls</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- Initialize ads when you get AdSense approval -->
+    <script>
+        // Uncomment when you have real ad codes:
+        // (adsbygoogle = window.adsbygoogle || []).push({});
+        // (adsbygoogle = window.adsbygoogle || []).push({});
+        // (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

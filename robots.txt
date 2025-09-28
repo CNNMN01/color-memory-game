@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Block any admin areas if you add them later
+# Disallow: /admin/
