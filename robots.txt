@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yoursite.com/sitemap.xml
+Sitemap: https://colourmemorygame.netlify.app/sitemap.xml
 
-# Block any admin areas if you add them later
-# Disallow: /admin/
+# Allow Google AdSense crawlers
+User-agent: Mediapartners-Google
+Allow: /
+
+# Crawl delay to be respectful
+Crawl-delay: 1
