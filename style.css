@@ -118,6 +118,7 @@ header h1 {
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 button {
@@ -152,6 +153,33 @@ button {
 #sound-toggle:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
+}
+
+/* Footer Links */
+.footer-links {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 /* Modal Styles */
@@ -227,27 +255,24 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 15px 0;
+    min-height: 90px;
 }
 
 .top-ad {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .bottom-ad {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+    position: relative;
+    margin-top: 20px;
 }
 
 .modal-ad {
     margin: 20px 0;
+    min-height: 250px;
 }
 
 .ad-placeholder {
@@ -257,6 +282,12 @@ button {
     border-radius: 5px;
     font-size: 12px;
     border: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+/* AdSense Responsive Adjustments */
+.adsbygoogle {
+    display: block;
+    width: 100%;
 }
 
 /* Share Message */
@@ -272,6 +303,7 @@ button {
     font-weight: bold;
     z-index: 2000;
     animation: fadeInOut 2s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* SEO Content */
@@ -332,9 +364,17 @@ button {
     }
     
     .top-ad, .bottom-ad {
-        position: relative;
-        transform: none;
-        left: auto;
+        min-height: 50px;
+    }
+    
+    .footer-links {
+        font-size: 12px;
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+    
+    .footer-links span {
+        margin: 0 5px;
     }
 }
 
@@ -356,5 +396,17 @@ button:focus, .color-button:focus {
 @media (prefers-contrast: high) {
     .color-button {
         border-width: 5px !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .ad-container,
+    .footer-links {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
     }
 }
