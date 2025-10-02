@@ -7,6 +7,7 @@
     <meta name="description" content="Challenge your memory with this addictive Simon Says-style color sequence game. How far can you go?">
     <meta name="keywords" content="memory game, simon says, brain training, color game, sequence game">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://colourmemorygame.netlify.app/">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
@@ -15,8 +16,7 @@
     <meta property="og:title" content="Color Memory Game - Test Your Memory Skills!">
     <meta property="og:description" content="Challenge your memory with this addictive color sequence game. How far can you go?">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+    <meta property="og:url" content="https://colourmemorygame.netlify.app/">
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532651292271019"
@@ -27,10 +27,12 @@
 <body>
     <!-- Top Banner Ad -->
     <div class="ad-container top-ad">
-        <div class="ad-placeholder">Advertisement</div>
-        <!-- Replace with actual ad code:
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532651292271019" data-ad-slot="XXXXXXXXXX" data-ad-format="banner"></ins>
-        -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3532651292271019"
+             data-ad-slot="1111111111"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
     </div>
 
     <div class="game-container">
@@ -44,20 +46,27 @@
         </header>
         
         <div class="game-board">
-            <div class="color-button red" data-color="red" data-sound="261.63"></div>
-            <div class="color-button blue" data-color="blue" data-sound="329.63"></div>
-            <div class="color-button green" data-color="green" data-sound="392.00"></div>
-            <div class="color-button yellow" data-color="yellow" data-sound="523.25"></div>
+            <div class="color-button red" data-color="red" data-sound="261.63" role="button" aria-label="Red button"></div>
+            <div class="color-button blue" data-color="blue" data-sound="329.63" role="button" aria-label="Blue button"></div>
+            <div class="color-button green" data-color="green" data-sound="392.00" role="button" aria-label="Green button"></div>
+            <div class="color-button yellow" data-color="yellow" data-sound="523.25" role="button" aria-label="Yellow button"></div>
         </div>
         
         <div class="controls">
             <button id="start-btn">🎮 Start Game</button>
-            <button id="sound-toggle">🔊</button>
+            <button id="sound-toggle" aria-label="Toggle sound">🔊</button>
+        </div>
+        
+        <!-- Footer Links for AdSense Policy Compliance -->
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms.html">Terms of Service</a>
         </div>
     </div>
 
     <!-- Game Over Modal -->
-    <div id="game-over-modal" class="modal hidden">
+    <div id="game-over-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <h2 id="modal-title">Game Over!</h2>
             <div class="final-score">
@@ -67,10 +76,12 @@
             
             <!-- Interstitial Ad -->
             <div class="ad-container modal-ad">
-                <div class="ad-placeholder">Advertisement</div>
-                <!-- Replace with actual ad code:
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532651292271019" data-ad-slot="XXXXXXXXXX" data-ad-format="rectangle"></ins>
-                -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-3532651292271019"
+                     data-ad-slot="2222222222"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
             </div>
             
             <div class="modal-buttons">
@@ -81,31 +92,38 @@
     </div>
 
     <!-- Share Success Message -->
-    <div id="share-message" class="share-message hidden">Score copied to clipboard!</div>
+    <div id="share-message" class="share-message hidden" role="status" aria-live="polite">Score copied to clipboard!</div>
 
     <!-- Bottom Banner Ad -->
     <div class="ad-container bottom-ad">
-        <div class="ad-placeholder">Advertisement</div>
-        <!-- Replace with actual ad code:
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532651292271019" data-ad-slot="XXXXXXXXXX" data-ad-format="banner"></ins>
-        -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3532651292271019"
+             data-ad-slot="3333333333"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
     </div>
 
     <!-- Hidden SEO Content -->
     <div class="seo-content">
         <h2>Simon Says Color Memory Game</h2>
         <p>Brain training memory game with colored buttons. Improve your memory and concentration skills with this addictive sequence game.</p>
-        <p>Features: Sound effects, high scores, social sharing, mobile responsive design, keyboard controls</p>
+        <p>Features: Sound effects, high scores, social sharing, mobile responsive design, keyboard controls (Q/W/A/S or 1/2/3/4)</p>
     </div>
 
     <script src="script.js"></script>
     
-    <!-- Initialize ads when you get AdSense approval -->
+    <!-- Initialize AdSense Ads -->
     <script>
-        // Uncomment when you have real ad codes:
-        // (adsbygoogle = window.adsbygoogle || []).push({});
-        // (adsbygoogle = window.adsbygoogle || []).push({});
-        // (adsbygoogle = window.adsbygoogle || []).push({});
+        window.addEventListener('load', function() {
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {
+                console.error('AdSense initialization error:', e);
+            }
+        });
     </script>
 </body>
 </html>
